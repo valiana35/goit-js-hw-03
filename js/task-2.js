@@ -1,10 +1,10 @@
 'use strict';
 function makeArray(firstArray, secondArray, maxLength) {
-    const newArray = firstArray.concat(secondArray);
+    let newArray = firstArray.concat(secondArray);
     if (newArray.length > maxLength) {
-        newArray.Length = newArray.maxLength;
+        newArray = newArray.slice(0, maxLength);
     } else {
-        newArray = [0, newArray.length - 1];
+        newArray = newArray.slice(0, newArray.length);
     }
     return newArray;
 }
